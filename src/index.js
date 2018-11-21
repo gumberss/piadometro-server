@@ -8,9 +8,11 @@ const io = require('socket.io')(server)
 
 const configuration = require('./configuration/configuration')
 
+/*
 mongoose.connect(`mongodb://${process.env.dbUsername}:${process.env.dbPassword}@ds037824.mlab.com:37824/piadometro`, {
     useNewUrlParser: true
 })
+*/
 
 app.use((req, res, next) => {
     req.io = io
