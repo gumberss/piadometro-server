@@ -6,7 +6,9 @@ const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
-mongoose.connect(`mongodb://${process.env.dbUsername}:${process.env.dbPassword}@ds037824.mlab.com:37824/piadometro`, {
+var process = process || require('./configuration/configuration')
+
+mongoose.connect(`mongodb://${process.env.dbUsername}:${process.env.dbPassword}@${process.env.server}`, {
     useNewUrlParser: true
 })
 
