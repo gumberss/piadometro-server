@@ -8,7 +8,7 @@ const io = require('socket.io')(server)
 
 //var process = process || require('./configuration/configuration')
 
-mongoose.connect(`mongodb://${process.env.dbUsername}:${process.env.dbPassword}@${process.env.server}`, {
+mongoose.connect(`mongodb+srv://${process.env.dbUsername}:${process.env.dbPassword}@${process.env.server}`, {
     useNewUrlParser: true
 })
 
